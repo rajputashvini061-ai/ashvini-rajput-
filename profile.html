@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Profile - Junior Developer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            max-width: 800px;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .hero-headline {
+            font-size: 1.3em;
+            font-weight: 500;
+            opacity: 0.95;
+            line-height: 1.6;
+            margin-top: 20px;
+        }
+
+        .divider {
+            height: 3px;
+            width: 80px;
+            background: rgba(255, 255, 255, 0.7);
+            margin: 20px auto;
+        }
+
+        .content {
+            padding: 50px 40px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-size: 1.5em;
+            color: #667eea;
+            margin-bottom: 20px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .about-text {
+            font-size: 1.05em;
+            line-height: 1.8;
+            color: #333;
+            text-align: justify;
+        }
+
+        .about-text p {
+            margin-bottom: 15px;
+        }
+
+        .skills-section {
+            margin-top: 30px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .skill-badge {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 20px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 600;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .skill-badge:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .cta-section {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .cta-text {
+            font-size: 1.1em;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: #667eea;
+            border: 2px solid #667eea;
+        }
+
+        .btn-secondary:hover {
+            background: #667eea;
+            color: white;
+        }
+
+        .footer {
+            background: #f8f9fa;
+            padding: 30px 40px;
+            text-align: center;
+            color: #666;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .social-links {
+            margin-top: 20px;
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .social-links a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #764ba2;
+        }
+
+        @media (max-width: 600px) {
+            .header {
+                padding: 40px 20px;
+            }
+
+            .header h1 {
+                font-size: 1.8em;
+            }
+
+            .hero-headline {
+                font-size: 1.05em;
+            }
+
+            .content {
+                padding: 30px 20px;
+            }
+
+            .about-text {
+                font-size: 1em;
+                text-align: left;
+            }
+
+            .skills-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header with Hero Headline -->
+        <div class="header">
+            <h1>Developer Profile</h1>
+            <div class="divider"></div>
+            <div class="hero-headline">
+                Junior Developer Transitioning into Data Science | Building Full-Stack Solutions with Data at the Core
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="content">
+            <!-- About Me Section -->
+            <div class="section">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-text">
+                    <p>I'm a junior developer with hands-on experience building web applications, now channeling that foundation into data science to solve problems with code and insights.</p>
+                    
+                    <p>My journey from frontend/backend development has taught me how to think systematically about problems, and I'm leveraging that mindset to master Python, data analysis, and machine learning.</p>
+                    
+                    <p>I'm seeking opportunities to blend my web development background with data science to create data-driven applications that drive real business value.</p>
+                </div>
+            </div>
+
+            <!-- Skills Section -->
+            <div class="section skills-section">
+                <h2 class="section-title">Core Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-badge">Web Development</div>
+                    <div class="skill-badge">Data Science</div>
+                    <div class="skill-badge">Python</div>
+                    <div class="skill-badge">JavaScript</div>
+                    <div class="skill-badge">Machine Learning</div>
+                    <div class="skill-badge">Full-Stack</div>
+                </div>
+            </div>
+
+            <!-- CTA Section -->
+            <div class="cta-section">
+                <p class="cta-text">Ready to collaborate on data-driven projects?</p>
+                <div class="button-group">
+                    <button class="btn btn-primary">Connect With Me</button>
+                    <button class="btn btn-secondary">View Projects</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>&copy; 2026 Junior Developer. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#">GitHub</a>
+                <a href="#">LinkedIn</a>
+                <a href="#">Email</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
